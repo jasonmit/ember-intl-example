@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-intl-test',
+    modulePrefix: 'ember-intl-example',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',

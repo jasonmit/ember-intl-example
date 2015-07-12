@@ -1,3 +1,17 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<h1>Product Listings</h1>
 
-{{outlet}}
+{{x-select
+	action=(action 'changeLocale')
+	options=locales
+	value=intl.locale
+}}
+
+{{#each model as |product|}}
+	{{#x-product
+		price=product.price
+		deadline=product.deadline
+		product=product.name}}
+			<h3>{{product.name}}</h3>
+			<img src={{product.imageUrl}} />
+	{{/x-product}}
+{{/each}}

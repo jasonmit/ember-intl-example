@@ -1,0 +1,4 @@
+product:
+  info: '{price, number, EUR} if ordered by {deadline, date, time}'
+  buy: 'buy'
+  title: 'Product Listing'
