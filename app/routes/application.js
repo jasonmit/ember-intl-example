@@ -15,19 +15,19 @@ export default Ember.Route.extend({
 		return [{
 			name: 'iphone',
 			price: 500,
-			imageUrl: '/iphone.png'
+			imageUrl: 'iphone.png'
 		},{
 			name: 'xbox',
 			price: 350,
-			imageUrl: '/xbox.png'
+			imageUrl: 'xbox.png'
 		},{
 			name: 'playstation',
 			price: 400,
-			imageUrl: '/playstation.png'
+			imageUrl: 'playstation.png'
 		},{
 			name: 'gameboy',
 			price: 50,
-			imageUrl: '/gameboy.png'
+			imageUrl: 'gameboy.png'
 		}].map(product => {
 			product.deadline = this.randomDate();
 			return product;
