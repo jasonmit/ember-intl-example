@@ -1,10 +1,14 @@
-<h1>Product Listings</h1>
+<h1>ember-intl demo</h1>
+
+<h2>Locale</h2>
 
 {{x-select
 	action=(action 'changeLocale')
 	options=locales
 	value=intl.locale
 }}
+
+<h2>Format Message</h2>
 
 {{#each model as |product|}}
 	{{#x-product
@@ -15,3 +19,50 @@
 			<img src={{product.imageUrl}} />
 	{{/x-product}}
 {{/each}}
+
+<div>
+	{{code-snippet name='format-message.hbs'}}
+</div>
+
+<h2>Format Time</h2>
+
+<div>{{format-time now format='hhmmss'}}</div>
+<div>{{format-time now hour='numeric' second='numeric' minute='numeric' hour12=false}}</div>
+
+<div>
+	{{code-snippet name='format-time.hbs'}}
+</div>
+
+
+<h2>Format Date</h2>
+
+<div>{{format-date now}}</div>
+<div>{{format-date yesterday}}</div>
+
+<div>
+	{{code-snippet name='format-date.hbs'}}
+</div>
+
+<div>
+	{{code-snippet name='format-relative.hbs'}}
+</div>
+
+<h2>Format Relative</h2>
+
+<div>{{format-relative now}}</div>
+<div>{{format-relative yesterday}}</div>
+<div>{{format-relative threeDaysAgo}}</div>
+
+<div>
+	{{code-snippet name='format-relative.hbs'}}
+</div>
+
+<h2>Format Number</h2>
+
+<div>{{format-number num}}</div>
+<div>{{format-number num format='EUR'}}</div>
+<div>{{format-number num style='currency' currency='USD'}}</div>
+
+<div>
+	{{code-snippet name='format-number.hbs'}}
+</div>

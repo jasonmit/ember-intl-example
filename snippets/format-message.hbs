@@ -1,0 +1,9 @@
+{{#each model as |product|}}
+  {{#x-product
+    price=product.price
+    deadline=product.deadline
+    product=product.name}}
+      <h3>{{product.name}}</h3>
+      <img src={{product.imageUrl}} />
+  {{/x-product}}
+{{/each}}
