@@ -31,8 +31,8 @@
     "ember-disable-proxy-controllers": "^1.0.0"
   },
   "dependencies": {
-    "ember-code-snippet": "^1.1.0",
     "ember-cli-document-title": "0.1.0",
+    "ember-code-snippet": "^1.1.0",
     "ember-intl": "2.0.0-beta.11"
   }
 }

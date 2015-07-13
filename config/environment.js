@@ -18,7 +18,7 @@ module.exports = function(environment) {
       // when it is created
     },
     intl: {
-      disablePolyfill: true
+      locales: ['en-us', 'en-gb', 'fr-fr']
     }
   };
 
