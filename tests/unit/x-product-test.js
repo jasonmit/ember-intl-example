@@ -1,4 +1,3 @@
-import hbs from 'htmlbars-inline-precompile';
 import { moduleForComponent, test } from 'ember-qunit';
 import initializer from '../../initializers/ember-intl';
 
@@ -13,7 +12,7 @@ moduleForComponent('x-product', 'XProductComponent', {
 	setup() {
 		const intl = this.container.lookup('service:intl');
 		initializer.initialize(this.container);
-		intl.set('locale', 'en-us');
+		intl.setLocale('en-us');
 	}
 });
 

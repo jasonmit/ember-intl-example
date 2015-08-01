@@ -1,8 +1,8 @@
 {{yield}}
 
 <div class="toolbar">
-	{{format-message (intl-get 'product.info') price=price deadline=deadline}}
-	<button>
-		{{format-message (intl-get 'product.buy')}}
-	</button>
+  {{format-message (intl-get 'product.info') price=price deadline=deadline product=product}}
+  <button>
+    {{format-message (intl-get 'product.buy')}}
+  </button>
 </div>

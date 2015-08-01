@@ -15,10 +15,10 @@ export default Ember.Component.extend({
             let options = get(this, 'options');
             let value = options[selectedIndex];
 
-            this.set('value', value);
-
             if (typeof changeAction === 'function') {
                 changeAction(value);
+            } else {
+                this.set('value', value);
             }
         }
     }

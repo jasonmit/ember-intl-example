@@ -3,25 +3,25 @@
 <h2>Locale</h2>
 
 {{x-select
-	action=(action 'changeLocale')
-	options=locales
-	value=intl.locale
+  action=(action 'changeLocale')
+  options=locales
+  value=intl.locale
 }}
 
 <h2>Format Message</h2>
 
 {{#each model as |product|}}
-	{{#x-product
-		price=product.price
-		deadline=product.deadline
-		product=product.name}}
-			<h3>{{product.name}}</h3>
-			<img src={{product.imageUrl}} />
-	{{/x-product}}
+  {{#x-product
+    price=product.price
+    deadline=product.deadline
+    product=product.name}}
+      <h3>{{product.name}}</h3>
+      <img src={{product.imageUrl}} />
+  {{/x-product}}
 {{/each}}
 
 <div>
-	{{code-snippet name='format-message.hbs'}}
+  {{code-snippet name='format-message.hbs'}}
 </div>
 
 <h2>Format Time</h2>
@@ -30,7 +30,7 @@
 <div>{{format-time now hour='numeric' second='numeric' minute='numeric' hour12=false}}</div>
 
 <div>
-	{{code-snippet name='format-time.hbs'}}
+  {{code-snippet name='format-time.hbs'}}
 </div>
 
 
@@ -40,11 +40,11 @@
 <div>{{format-date yesterday}}</div>
 
 <div>
-	{{code-snippet name='format-date.hbs'}}
+  {{code-snippet name='format-date.hbs'}}
 </div>
 
 <div>
-	{{code-snippet name='format-relative.hbs'}}
+  {{code-snippet name='format-relative.hbs'}}
 </div>
 
 <h2>Format Relative</h2>
@@ -54,7 +54,7 @@
 <div>{{format-relative threeDaysAgo}}</div>
 
 <div>
-	{{code-snippet name='format-relative.hbs'}}
+  {{code-snippet name='format-relative.hbs'}}
 </div>
 
 <h2>Format Number</h2>
@@ -64,5 +64,5 @@
 <div>{{format-number num style='currency' currency='USD'}}</div>
 
 <div>
-	{{code-snippet name='format-number.hbs'}}
+  {{code-snippet name='format-number.hbs'}}
 </div>
