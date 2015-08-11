@@ -1,11 +1,11 @@
 import hbs from 'htmlbars-inline-precompile';
 import { moduleForComponent, test } from 'ember-qunit';
-import initializer from '../../initializers/ember-intl';
+import instanceInitializer from '../../instance-initializers/ember-intl';
 
-moduleForComponent('x-product', 'XProductComponent', {
+moduleForComponent('x-product', 'XProductComponent Integration', {
   integration: true,
   setup() {
-    initializer.initialize(this.container);
+    instanceInitializer.initialize(this);
     const intl = this.container.lookup('service:intl');
     intl.setLocale('en-us');
   }
@@ -13,9 +13,9 @@ moduleForComponent('x-product', 'XProductComponent', {
 
 test('it renders', function(assert) {
   assert.expect(1);
-  this.render(hbs`{{x-product price=price deadline=deadline}}`);
   this.set('price', 1000);
   this.set('deadline', new Date());
+  this.render(hbs`{{x-product price=price deadline=deadline}}`);
   let output = this.$().text();
   assert.ok(output);
 });

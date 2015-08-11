@@ -1,5 +1,5 @@
 import { moduleForComponent, test } from 'ember-qunit';
-import initializer from '../../initializers/ember-intl';
+import instanceInitializer from '../../instance-initializers/ember-intl';
 
 moduleForComponent('x-product', 'XProductComponent', {
 	unit: true,
@@ -7,11 +7,12 @@ moduleForComponent('x-product', 'XProductComponent', {
 		'service:intl',
 		'ember-intl@adapter:-intl-adapter',
 		'ember-intl@formatter:format-message',
+		'helper:format-message',
 		'helper:intl-get'
 	],
 	setup() {
+		instanceInitializer.initialize(this);
 		const intl = this.container.lookup('service:intl');
-		initializer.initialize(this.container);
 		intl.setLocale('en-us');
 	}
 });
