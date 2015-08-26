@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'ember-intl-example',
     environment: environment,
     locationType: 'hash',
-    baseURL: '/',
+    baseURL: '/ember-intl-example',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
