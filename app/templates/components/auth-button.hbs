@@ -1,0 +1,5 @@
+{{#if user.loggedIn}}
+  {{format-message (intl-get 'auth.logout')}}
+{{else}}
+  {{format-message (intl-get 'auth.login')}}
+{{/if}}
