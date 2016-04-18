@@ -5,7 +5,6 @@ module.exports = function(environment) {
     modulePrefix: 'ember-intl-example',
     environment: environment,
     locationType: 'hash',
-    baseURL: '/ember-intl-example',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -16,9 +15,6 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    },
-    intl: {
-      locales: ['en-us', 'en-gb', 'fr-fr']
     }
   };
 
@@ -40,10 +36,6 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
-  }
-
-  if (environment === 'production') {
-    ENV.baseURL = '/ember-intl-example';
   }
 
   return ENV;

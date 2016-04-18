@@ -1,0 +1,7 @@
+{
+  "product": {
+    "info": "{price, number, USD} if ordered by {deadline, date, time}",
+    "buy": "buy",
+    "title": "Product Listing"
+  }
+}
